@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; // ✅ No Router import here!
 import Navbar from "./components/Navbar.jsx";
-import Home from "./components/home.jsx";
+import Home from "./components/Home.jsx";
 import Signup from "./components/Signup.jsx";
 import Login from "./components/Login.jsx";
 import Profile from "./components/Profile.jsx";
-import BookingConfirmation from "./components/BookingConfirmation";
+import BookingConfirmation from "./components/BookingConfirmation.jsx"; // Ensure correct filename
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/confirmation" element={<BookingConfirmation />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
