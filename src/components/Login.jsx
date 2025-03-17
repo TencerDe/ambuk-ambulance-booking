@@ -30,8 +30,9 @@ function Login() {
       return;
     }
 
-    setError(""); // Clear errors if validation passes
-    alert("Login successful!"); // Replace with API call later
+    // Store user in localStorage and redirect
+    localStorage.setItem("user", JSON.stringify({ fullName: "Test User", email }));
+    window.location.href = "/profile"; // Redirect to Profile Page
   };
 
   return (

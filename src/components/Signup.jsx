@@ -31,8 +31,9 @@ function Signup() {
       return;
     }
 
-    setError(""); // Clear errors if validation passes
-    alert("Signup successful!"); // Replace with API call later
+    // Store user in localStorage and redirect
+    localStorage.setItem("user", JSON.stringify({ fullName, email }));
+    window.location.href = "/profile"; // Redirect to Profile Page
   };
 
   return (
