@@ -1,0 +1,68 @@
+/* 🎨 Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Reduced padding */
+    height: 30px; /* Smaller height */
+    background: var(--gradient-bg);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo a {
+    color: white;
+    font-size: 1.5rem; /* Smaller logo text */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* 🌟 Nav Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 10px; /* Reduced spacing */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem; /* Smaller font */
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+  }
+  
+/* Global Centering */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text */
+    padding: 20px;
+  }
+  
+  /* Ensure Navbar doesn't overlap content */
+  .home,
+  .signup,
+  .login,
+  .profile,
+  .confirmation {
+    margin-top: 60px; /* Push content below navbar */
+  }
+  
+
+  /* 📱 Fix for Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      top: 50px; /* Adjusted to new navbar height */
+    }
+  }
+  

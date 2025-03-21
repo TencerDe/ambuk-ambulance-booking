@@ -5,7 +5,7 @@ function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div>
+    <div className="page-container">
       <h1>Welcome to Ambuk</h1>
       <p>Your trusted ambulance booking service.</p>
       

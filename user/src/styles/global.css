@@ -1,0 +1,143 @@
+/* 🌍 Global Styles for Ambuk Frontend */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 🎨 Light & Dark Theme Colors */
+:root {
+  --primary-color: #ff4d4d; /* Red Theme */
+  --secondary-color: #2c3e50; /* Dark Gray */
+  --background-light: #f8f9fa;
+  --background-dark: #181818;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --gradient-bg: linear-gradient(135deg, #78b1e7, #046361);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--gradient-bg);
+  background-attachment: fixed; /* Ensures background stays fixed while scrolling */
+  background-size: cover;
+  transition: background 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* 🌙 Default Theme (Light Mode) */
+
+/* 🔄 Flexbox Centering */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📦 Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 🚀 Global Button Styles */
+button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #e63939;
+}
+
+/* 🌐 Navbar */
+.navbar {
+  width: 300%;
+  max-width: 1550px; /* Restrict width for better alignment */
+  margin: 0 auto; /* Center navbar */
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  align-items: center;
+  padding: 25px 80px;
+  box-sizing: border-box;
+}
+
+/* 🍔 Hamburger Menu */
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+}
+}
+
+/* 🏥 Ambulance Booking Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.modal h2 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.modal input,
+.modal select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Ensure full viewport height */
+  text-align: center; /* Center text */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home,
+.signup,
+.login,
+.profile,
+.confirmation {
+  margin-top: 60px; /* Push content below navbar */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
